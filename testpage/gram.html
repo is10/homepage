@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+	<head>
+		<meta content lang="ja">
+		<meta content charset="utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<link rel="stylesheet" href="stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Poly" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="gramjs.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<title>gram</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="pagetop">
+				<a href="#wrapper" id="returnmove">
+					▲上へ
+				</a>
+			</div>
+			<div id="header">
+				<div class="topmenu">
+					<div class="topmenuback"></div>
+					<div class="leftside">
+						<a href="gram.html">
+							<img src="image/title.png" class="title" alt="title">
+						</a>
+					</div>
+					<div class="rightside">
+						<ul class="menu">
+							<li class="menulinks"><a href="#informationcatch">information</a></li>
+							<li class="menulinks"><a href="#menucatch">Menu</a></li>
+							<li class="menulinks"><a href="#cafecatch">Cafe</a></li>
+							<li class="menulinks"><a href="#calendercatch">Calender</a></li>
+							<li class="menulinks"><a href="#accesscatch">Access</a></li>
+							<li class="menulinks"><a href="#snscatch">SNS</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="contentswrapper">
+				<div id="front">
+					<div id="fronthello"><p>Welcome To Gram!!</p></div>
+					<div id="frontmove">
+						<p>
+							<a href="#hellocatch">　　-ご挨拶-</a>　　|　　<a href="#sitemapcatch">-サイトマップ-</a>
+						</p>
+					</div>
+				</div>
+				<div id="hellocatch"></div>
+				<div id="hello">
+					<p>あいさつのテキスト</p>
+				</div>
+				<div id="informationcatch"></div>
+				<div id="information">
+					<div class="contentstitle">
+						<p>information</p>
+					</div>
+					<div id="informationcontents">
+						<div id="informationsubtitle">
+							<p>Gramとは</p>
+						</div>
+						<div id="informationsentence">
+							<p>gramについてのテキスト</p>
+						</div>
+						<div id="informationimages">
+							<img src="image/information02-1.jpg" class="informationimagesclass">
+							<img src="image/information02-1.jpg" class="informationimagesclass">
+							<img src="image/information02-1.jpg" class="informationimagesclass">
+						</div>
+					</div>
+				</div>
+				<div id="menucatch"></div>
+				<div id="menu">
+					<div class="contentstitle">
+						<p>Menu</p>
+					</div>
+					<div id="menucontents">
+						<div id="menuname">
+							<p>まつ毛パーマ</p>
+							<p>まつ毛エクステ120本～</p>
+							<p>カルジェネイル（ハンド・フット）</p>
+							<p>フェイシャルエステ90分</p>
+							<p>ボディオイルマッサージ70分</p>
+							<p>リンパドレナージュ60分～<br>（火曜日不定期・木曜）</p>
+							<p>足裏リラクゼーション25分</p>
+							<p>岩盤浴「玉川の湯」（手ぶらＯＫ）</p>
+							<p>もみほぐし15分<br>（他施術にプラスで割引）</p>
+							<p>御心カウンセリング20分（要予約）</p>
+						</div>
+						<div id="menuprice">
+							<p>\2500</p>
+							<p>\6980～</p>
+							<p>\6480～</p>
+							<p>\5500</p>
+							<p>\6480</p>
+							<p>\6480～</p>
+							<p>\2500</p>
+							<p>\2000</p>
+							<p>\1500</p>
+							<p>\1000</p>
+							<p>\10000</p>
+						</div>
+						<div id="menuimages">
+							<img src="image/information02-1.jpg" id="menuimagesleftfirst">
+							<img src="image/information02-1.jpg" id="menuimagesleftsecond">
+							<img src="image/information02-1.jpg" id="menuimagesrightfirst">
+							<img src="image/information02-1.jpg" id="menuimagesrightsecond">
+						</div>
+					</div>
+				</div>
+				<div id="cafecatch"></div>
+				<div id="cafe">
+					<div class="contentstitle">
+						<p>Cafe</p>
+					</div>
+					<div id="cafecontents">
+						<div id="cafesentence">
+							<p>cafeの説明</p>
+						</div>
+						<div id="cafeprice">
+							<p>cafeメニューと値段</p>
+						</div>
+						<div id="cafeimages">
+							<img src="image/information02-1.jpg" id="cafeimagesleftfirst">
+							<img src="image/information02-1.jpg" id="cafeimagesleftsecond">
+							<img src="image/information02-1.jpg" id="cafeimagesrightfirst">
+							<img src="image/information02-1.jpg" id="cafeimagesrightsecond">
+						</div>
+					</div>
+				</div>
+				<div id="calendercatch"></div>
+				<div id="calender">
+					<div class="contentstitle">
+						<p>Calender</p>
+					</div>
+					<div id="calendercontents">
+						<div id="sample">
+							<p>SAMPLE</p>
+						</div>
+						<div id="calenderbody">
+							<table border="0" cellpadding="2" cellspacing="1" bgcolor="#333333"  id="calenderedit">
+								<tr align="center" bgcolor="#FFFFFF">
+									<td colspan="7">2017年1月</td>
+								</tr>
+								<tr align="center" bgcolor="#E6E3C9">
+									<td>日</td>
+									<td>月</td>
+									<td>火</td>
+									<td>水</td>
+									<td>木</td>
+									<td>金</td>
+									<td>土</td>
+								</tr>
+								<tr align="center" bgcolor="#FFFFFF">
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr align="center" bgcolor="#FFFFFF">
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+									<td >8</td>
+									<td>9</td>
+								</tr>
+								<tr align="center" bgcolor="#FFFFFF">
+									<td>10</td>
+									<td>11</td>
+									<td>12</td>
+									<td>13</td>
+									<td>14</td>
+									<td>15</td>
+									<td>16</td>
+								</tr>
+								<tr align="center" bgcolor="#FFFFFF">
+									<td>17</td>
+									<td>18</td>
+									<td>19</td>
+									<td>20</td>
+									<td>21</td>
+									<td>22</td>
+									<td>23</td>
+								</tr>
+								<tr align="center" bgcolor="#FFFFFF">
+									<td>24</td>
+									<td>25</td>
+									<td>26</td>
+									<td>27</td>
+									<td>28</td>
+									<td>29</td>
+									<td>30</td>
+								</tr>
+								<tr align="center" bgcolor="#FFFFFF">
+									<td>31</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</table>
+							<font color="#FF6666">　</font>
+						</div>
+						<div id="calenderpoint">
+							<p>やっぱりカレンダーはスライド式かなあ。。</p>
+						</div>
+					</div>
+				</div>
+				<div id="accesscatch"></div>
+					<div id="access">
+					<div class="contentstitle">
+						<p>Accsess</p>
+					</div>
+					<div id="accesscontents">
+						<div id="accesssentence">
+							<p>○○線○○駅より徒歩〇分</p>
+						</div>
+						<div id="accessmap">
+							<div id="mapField"></div>
+						</div>
+					</div>
+				</div>
+				<div id="snscatch"></div>
+				<div id="sns">
+					<div id="instagram">
+					<div id="instatitle" class="snsedit">
+							<p>Instagram</p>
+						</div>
+						<div id="instacontents">
+						</div>
+					</div>
+					<div id="ameblo">
+						<div id="ameblotitle" class="snsedit">
+							<p>アメブロ</p>
+						</div>
+						<div id="ameblocontents"></div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="sitemapcatch"></div>
+				<div id="sitemap" ><p>サイトマップ</p></div>
+				<div id="copyright">copyright &copy; 2017 tetty! All Right Reserved.</div>
+			</div>
+		</div>
+	</body>
+</html>
