@@ -5,20 +5,70 @@ $(document).ready(function(){
   //   arrows:false,
   // });
   $('#slider').infiniteslide({
-            'height': 400, //高さ
-            'speed': 40, //速さ
-            'direction' : 'left', //向き
-            'pauseonhover': false //マウスオーバーでストップ
+            'height': 400,
+            'speed': 40, 
+            'direction' : 'left', 
+            'pauseonhover': false 
   });
 });
+//レスポンシブ
+$(window).on('load', function(e) {
+  $('a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    
+    var speed    = 600;
+    var winWidth = window.innerWidth;
+    var hdrHeight;
+    if (winWidth > 768) {
+      // PC時
+      hdrHeight = 50;
+    } else if (winWidth <= 480) {
+      // TB時
+      hdrHeight = 50;
+      speed = 100;
+    } else if (winWidth <= 768) {
+      // SP時
+      hdrHeight = 100;
+    }
+    var href      = $(this).attr('href');
+    var target    = $(href == '#' || href == '' ? 'html' : href);
+    var position  = target.offset().top - hdrHeight;
 
+    $('body').animate({
+      scrollTop: position
+    }, speed, "easeInOutQuart");
+    if (480 >= winWidth){
+      $("#drop").slideToggle();
+      $("#drop-box").slideToggle();
+    }
+  });
+});
+//toggleクリックのアクション
+$(document).ready(function(){
+  $("#toggle").click(function(){
+    $("#drop").slideToggle();
+    $("#drop").toggleClass('active');
+    $("#drop-box").slideToggle();
+    $("#drop-box").toggleClass('active');
+    return false;
+  });
+  $(window).resize(function(){
+    var win = window.innerWidth;
+    var p = 480;
+    
+    if(win > p){
+      $("#drop").show();
+    }else {
+      $("#drop").hide();
+    }
+  });
+});
+//ナビゲーションのあまり埋める
 $(document).ready(function () {
-    var headerHight = 50; //ヘッダの高さ
-    $('a[href^=#]').click(function(){
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
-        $("html, body").animate({scrollTop:position}, 600, "easeInOutQuart");
-        return false;
-    });
+  hsize = $(window).height();
+  $("#drop-box").css("height", hsize - 450 + "px");
+});
+$(window).resize(function () {
+  hsize = $(window).height();
+  $("#drop-box").css("height", hsize - 450 + "px");
 });

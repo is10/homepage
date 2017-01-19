@@ -2,13 +2,16 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="ここに説明">
   <title>GRAM</title>
   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
   <link rel="stylesheet"  href="main.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <!--<script src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>-->
   <script src="infiniteslide.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="main.js"></script>
@@ -16,58 +19,365 @@
 <body>
   <header>
     <div id="header">
-      <nav class="nav cf" id="top">
-        <div id="nav-left">
-          <a href="#header"><img src="" alt="logo"></a>
-        </div>
-        <div id="nav-right">
-          <ul>
-            <li><a href="#beauty">美容</a></li>
-            <li><a href="#cafe">カフェ</a></li>
-            <li><a href="#shop">まるかん</a></li>
-            <li><a href="#counseling">御心カウンセリング</a></li>
-            <li><a href="#access">アクセス</a></li>
-            <li><a href="#link">リンク</a></li>
+      <nav class="nav">
+        <div id="top"> 
+          <div id="toggle"><a href="">メニュー</a></div>
+          <ul class="cf" id="drop">
+            <li class="li-left"><a href="#header"><img src="images/rogo.jpg" alt="logo">TOPへ</a></li>
+            <li class="li-left"><a class="icon" href="#greeting">ご挨拶</a></li>
+            <li class="li-left"><a class="icon" href="#beauty">美容</a></li>
+            <li class="li-left"><a class="icon" href="#cafe">カフェ</a></li>
+            <li class="li-right"><a class="icon" href="#shop">まるかん</a></li>
+            <li class="li-counseling"><a class="icon" href="#counseling">御心カウンセリング</a></li>
+            <li class="li-right"><a class="icon" href="#access">アクセス</a></li>
+            <li class="li-right"><a class="icon" href="#link">リンク</a></li>
           </ul>
+          <div id="drop-box"></div>
         </div>
       </nav>
-      <p id="logo"><img src="" alt="logo"></p>
-      <h1>複合美容施設Gram</h1>
-      <div class="nav" id="hello">
-        <ul class="cf">
-          <li><a href="#greeting">ご挨拶</a></li>
-          <li><a href="">スタッフ</a></li>
-        </ul>
+      <p id="logo"><img src="images/rogonasi.png" alt="logo"></p>
+      <div id="name">
+        <h1>複合サロンGram</h1>
       </div>
     </div>
   </header>
-  <div id="slider">
-    <ul>
-      <li><img src="images/bckimage.jpg" alt="1"></li>
-      <li><img src="images/backimage.jpg" alt="2"></li>
-      <li><img src="images/backi3age.jpg" alt="3"></li>
-    </ul>
-  </div>
-  <div id="content">
+  <section>
+    <div id="slider">
+      <ul>
+        <li><img src="images/esute.jpg" alt="1"></li>
+        <li><img src="images/isu.jpg" alt="2"></li>
+        <li><img src="images/tume.jpg" alt="3"></li>
+        <li><img src="images/ita.jpg" alt="4"></li>
+      </ul>
+    </div>
+  </section>
+  <article>
     <div id="greeting">
       <h2>ご挨拶</h2>
       <p>こんにちは</p>
     </div>
-    <div id="staff">
-      <h2>スタッフ</h2>
-      <p>紹介</p>
-    </div>
+  </article>
+  <article>
     <div id="beauty">
-      <h2>美容メニュー</h2>
-      <p>メニュー</p>
+      <section class="section">
+        <h4>-beauty-</h4>
+        <h2>美容</h2>
+        <div class="menu cf">
+          <div class="menu-left">
+            <h3>エステ</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th rowspan="2">
+                    <span class="inline">超音波コース</span>
+                    <span class="inline">約90分</span>
+                  </th>
+                  <td>
+                    <span class="inline">女性</span>
+                    <span class="inline">￥5,500</span>
+                  </td>
+                </tr>
+                <tr>  
+                  <td>
+                    <span class="inline">男性</span>
+                    <span class="inline">￥6,500</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">
+                    <span class="inline">ハンドマッサージコース</span>
+                    <span class="inline">約90分</span>
+                  </th>
+                  <td>
+                    <span class="inline">女性</span>
+                    <span class="inline">￥5,500</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="inline">男性</span>
+                    <span class="inline">￥6,500</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>マッサージ</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">オイルマッサージ</span>
+                    <span class="inline">約70分</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥6,480</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">足裏リラクゼーション</span>
+                  </th>
+                  <td>
+                    <span class="inline">女性</span>
+                    <span class="inline">￥2,500</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">フットバス15分</span>
+                    <span class="inline">＋足裏25分</span>
+                    <span class="inline">＋中国茶付き</span>
+                  </th>
+                  <td>
+                    <span class="inline">男性</span>
+                    <span class="inline">￥3,000</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text">
+              <span class="inline">※心臓の悪い方、妊婦の方、</span>
+              <span class="inline">泥酔の方、</span>
+              <span class="inline">水虫の方は</span>
+              <span class="inline">誠に申し訳ございませんが</span>
+              <span class="inline">お断り致しております。</span></p>
+            <h3>まつげ</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">まつげ</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥2,500</span>
+                    <span class="inline">(初回￥2,000)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">お直し</span>
+                    <span class="inline">アフターサービス</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">当日～3日以内</span>
+                  </th>
+                  <td>
+                    <span class="inline">無料</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">1週間以内</span>
+                  </th>
+                  <td>
+                    <span class="inline">半額￥1,250</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">まつ毛エクステ</span>
+                    <span class="inline">（～両目120本まで）</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥6,980</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">リペア料金</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">20本</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥2,000</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">40本</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥3,500</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">60本</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥4,000</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">80本</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥5,000</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="menu-right">
+            <h3>リンパ</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">基本の全身①</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥6,480</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">60分コース</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">フェイシャル</span>
+                    <span class="inline">＋ピーリング＋パック</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥6,480</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">60分コース</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">①＋ウエスト・二の腕痩身</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥7,560</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">80分コース</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">①＋フェイシャル</span>
+                    <span class="inline">＋ピーリング</span>
+                    <span class="inline">＋パック</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥8,640</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">90分コース</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">90分コース</span>
+                    <span class="inline">＋ウエスト・二の腕痩身</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥10,800</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">110分コース</span> 
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">90分コース</span>
+                    <span class="inline">＋ウエスト・二の腕痩身</span>
+                    <span class="inline">＋ハンド</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥15,120</span> 
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">150分コース</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">マッサージ</span>
+                    <span class="inline">＋ピーリング</span>
+                    <span class="inline">＋パック</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥2,700</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ハンドコース</span>
+                    <span class="inline">(30分)</span>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+            <h3>岩盤浴</h3>  
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">岩盤浴「玉川の湯」</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥4,000</span>
+                    <span class="inline">→今なら￥2,000</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </div>
+  </article>
+  <article>
     <div id="cafe">
       <h2>カフェ</h2>
       <p>美味しいよ！</p>
     </div>
-    <div>
-      <h2></h2>
+  </article>
+  <article>
+    <div id="shop">
+      <h2>menu</h2>
+      <p>sugoi</p>
     </div>
-  </div>
+  </article>
+  <article>
+    <div id="counseling">
+      <h2>syousai</h2>
+      <p>kokoro</p>
+    </div>
+  </article>
+  <article>
+    <div id="access">
+      <h2>access</h2>
+      <p>koko</p>
+    </div>
+  </article>
+  <article>
+    <div id="link">
+      <h2>link</h2>
+      <p>kokoko</p>
+    </div>
+  </article>
 </body>
 </html>

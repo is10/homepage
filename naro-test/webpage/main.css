@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 *::before
@@ -11,8 +10,10 @@
 }
 
 body {
-  font: 16px "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
-  -webkit-text-size-adjust: 100%;
+  font: 16px "Sawarabi Mincho";
+  font-weight: normal;
+  /*"Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;*/
+  -webkit-text-size-adjust : 100%!important ;
 }
 
 img {
@@ -24,6 +25,11 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
+}
+
+.cf {
+  overflow: hidden;
 }
 
 .cf::after {
@@ -32,57 +38,75 @@ a {
   content: "";
 }
 
-.wrapper {
-  width: 100%;
-}
-
-.inner {
-  margin: 0 auto;
-  width: 1000px;
-}
 
 #header {
-  /*background: url(images/front.JPG) no-repeat center top;*/
-  background: grey;
+  background: url(images/ita.jpg) repeat center top;
   width: 100%;
   height: 640px;
 }
-
-#nav-left {
-  width: 30%;
-  float: left;
-}
-
-#nav-left img{
-  height: 50px;
-  width: 50px;
-}
-
-#nav-right {
-  width: 70%;
-  float: left;
-}
-
-.nav li {
-  float: left;
-  text-align: center;
+#header img {
+  height: 40px;
+  width: 40px;
+  padding: 5px;
 }
 
 #top {
-  height: 50px;
-  line-height: 50px;
   width: 100%;
-  background-color: red;
+  margin: 0 auto;
+  background: #56ab2f; 
+  background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); 
+  background: linear-gradient(to left, #56ab2f , #a8e063); 
+  color:#fff;
   position: fixed;
+  top:0;
   z-index: 999;
 }
 
 #top li{
-  width: 16%;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  float: left;
+  text-align: center;
+  font-family: "Tsukushi B Round Gothic","筑紫B丸ゴシック"; 
+  font-weight: bold;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.li-left {
+  width: 11%;
+}
+
+.li-right {
+  width: 11%;
+}
+
+.li-counseling {
+  width: 23%;
+}
+
+.icon::before{
+  font-family: FontAwesome;
+  content: "\f299";
 }
 
 #top li:hover {
-  background-color: blue;
+  opacity: .5;
+  -webkit-opacity: .5;
+  -moz-opacity: .5;
+}
+
+#toggle {
+  display: none;
+}
+
+#drop-box {
+    background-color: white;
+    display: none;
+    width: 100%;
 }
 
 #logo {
@@ -91,38 +115,127 @@ a {
 }
 
 #logo img {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
+}
+
+#name {
+  margin-top: 10px;
 }
 
 h1 {
-  margin-top: 10px;
   height: 50px;
-  font: 24px /50px bold;
+  width: 100%;
+  margin: 0 auto;
+  font: 24px /50px normal;
   text-align: center;
-  background: rgba( 255, 0, 0, .5)
-}
-
-#hello {
-  margin-top: 40px;
-  height: 70px;
-  font: 16px /70px bold;
-  background: rgba( 255, 200, 200, .5);
-}
-
-#hello li{
-  width: 50%;
 }
 
 #slider {
   background-color: yellow;
   margin: 30px 0;
   height: 200px;
+  width: 100%;
 }
 
 #slider img {
-  height: 400px;
-  width: 400px;
+  height: auto;
+  width: 100%;
+}
+
+article {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+h3 {
+  height: 30px;
+  line-height: 30px;
+  width: 90px;
+  font-family: "Kokoro";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0; 
+  display: inline-block;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+h4 {
+  height: 20px;
+  font: 20px/20px serif;
+  text-align: center;
+  padding-top:10px; 
+}
+
+.section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+article p{
+  text-align: center;
+}
+
+.menu {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.menu-left {
+  float: left;
+  text-align: center;
+  width: 50%;
+  border-right: 1px solid gray;
+}
+
+.menu-right {
+  float: left;
+  width: 49%;
+  text-align: center;
+}
+
+.menu table {
+  width: 98%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+th {
+  text-align: left;
+  width: 65%; 
+  padding: 7px;
+}
+
+.text {
+  padding: 5px 0;
+  line-height: 150%;
+}
+
+td {
+  text-align: right;
+  width: 35%;
+  padding: 7px;
+}
+
+
+.menu-left td {
+  padding-right: 30px;
+}
+
+.menu-right th {
+  padding-left: 30px;
 }
 
 #greeting {
@@ -136,11 +249,102 @@ h1 {
 }
 
 #beauty {
-  background-color: darkred;
-  height: 650px;
+  height: auto;
 }
 
 #cafe {
   background-color: lightblue;
   height: 650px;
+}
+
+#shop {
+  background-color: pink;
+  height: 650px;
+}
+
+#counseling {
+  background-color: saddlebrown;
+  height: 650px;
+}
+
+#access {
+  background-color: lightblue;
+  height: 650px;
+}
+
+#link {
+  background-color: chocolate;
+  height: 650px;
+}
+
+/*以下タブレット用*/
+@media screen and ( max-width:768px ) {
+  .li-left {
+    width: 25%;
+    border-bottom: 1px solid #333
+  }
+
+  .li-right {
+    width: 20%;
+  }
+
+  .li-counseling {
+    width: 35%;
+  }
+
+  .section {
+    width: 90%;
+  }
+
+  .menu-left {
+    float: none;
+    width: 100%;
+  }
+
+  .menu-right {
+    float: none;
+    width: 100%;
+    border: none;
+  }
+
+  .menu-left td {
+    padding: 0;
+  }
+
+  .menu-right th {
+    padding: 0;
+  }
+}
+/*以下スマホ用*/
+@media screen and ( max-width:480px ) {
+  #top ul {
+    display: none;
+  }
+
+  #toggle {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: "Tsukushi B Round Gothic","筑紫B丸ゴシック"; 
+    font-weight: bold;
+  }
+
+  .li-left {
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: none;
+  }
+
+  .li-right {
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: none;
+  }
+
+  .li-counseling {
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: none;
+  }
 }
