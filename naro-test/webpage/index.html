@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="ここに説明">
-  <title>GRAM</title>
+  <title>GLAM</title>
   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
   <link rel="stylesheet"  href="main.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="infiniteslide.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="main.js"></script>
@@ -23,7 +23,7 @@
         <div id="top"> 
           <div id="toggle"><a href="">メニュー</a></div>
           <ul class="cf" id="drop">
-            <li class="li-left"><a href="#header"><img src="images/rogo.jpg" alt="logo">TOPへ</a></li>
+            <li class="li-left"><a class="icon" href="#header">TOPへ</a></li>
             <li class="li-left"><a class="icon" href="#greeting">ご挨拶</a></li>
             <li class="li-left"><a class="icon" href="#beauty">美容</a></li>
             <li class="li-left"><a class="icon" href="#cafe">カフェ</a></li>
@@ -31,7 +31,7 @@
             <li class="li-counseling"><a class="icon" href="#counseling">御心カウンセリング</a></li>
             <li class="li-right"><a class="icon" href="#access">アクセス</a></li>
             <li class="li-right"><a class="icon" href="#link">リンク</a></li>
-            <li id="drop-box"></li>
+            <li id="drop-box"><img src="images/rogonasi.jpg" alt="logo"></li>
           </ul>
         </div>
       </nav>
@@ -53,8 +53,28 @@
   </section>
   <article>
     <div id="greeting">
-      <h2>ご挨拶</h2>
-      <p>こんにちは</p>
+      <section class="section">
+        <h2>ご挨拶</h2>
+        <h3>地元、蒲生を<span class="inline">もっと元気にするグラム</span></h3>
+        <p>
+          健康第一、素直な女性が輝く今、仕事、家事、育児に
+          頑張るあなたを応援します。
+          「欲張りで大満足、新しいスタイルの複合サロン　グラムは、
+          お得と笑顔がいっぱいです。」
+          ビールを片手にネイルをしたり、ランチ付きエステなど
+          お客様のオリジナルでメニューの組み合わせは自由です。
+          カフェはもちろんですが、足裏リフレや岩盤浴など
+          ご夫婦で楽しんでいただけます。（男性もご利用いただけます。）
+          ”心の元気”
+          花、木々溢れ、そして音楽の中、カフェでくつろぎ、
+          エステやネイルを楽しみ、癒される・・・お友達とのおしゃべりらんちもまた、
+          ストレス発散になり免疫力も向上します。
+          ”体の元気”
+          当店が取り扱っているまるかんのサプリメント（健康補助食品）
+          で、毎日の食事ではおぎ得なかった栄養をサプリメントで
+          補い、健康になっていただきたいです。
+         </p>
+      </section>
     </div>
   </article>
   <article>
@@ -64,43 +84,6 @@
         <h2>美容</h2>
         <div class="menu cf">
           <div class="menu-left">
-            <h3>フェイシャルトリートメント</h3>
-            <table>
-              <tbody>
-                <tr>
-                  <th rowspan="2">
-                    <span class="inline">超音波コース</span>
-                    <span class="inline">約90分</span>
-                  </th>
-                  <td>
-                    <span class="inline">女性</span>
-                    <span class="inline">￥5,500</span>
-                  </td>
-                </tr>
-                <tr>  
-                  <td>
-                    <span class="inline">男性</span>
-                    <span class="inline">￥6,500</span>
-                  </td>
-                </tr>
-                <tr>
-                  <th rowspan="2">
-                    <span class="inline">ハンドマッサージコース</span>
-                    <span class="inline">約90分</span>
-                  </th>
-                  <td>
-                    <span class="inline">女性</span>
-                    <span class="inline">￥5,500</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <span class="inline">男性</span>
-                    <span class="inline">￥6,500</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
             <h3>マッサージ</h3>
             <table>
               <tbody>
@@ -199,11 +182,13 @@
                     <span class="inline">￥6,980</span>
                   </td>
                 </tr>
-                <tr>
-                  <th>
-                    <span class="inline">リペア料金</span>
-                  </th>
-                </tr>
+              </tbody>
+            </table>
+            <h5>
+              <span class="inline">リペア料金</span>
+            </h5>
+            <table>
+              <tbody>
                 <tr>
                   <th>
                     <span class="inline">20本</span>
@@ -238,8 +223,6 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="menu-right">
             <h3>リンパドレナージュ</h3>
             <table>
               <tbody>
@@ -272,7 +255,8 @@
                 </tr>
                 <tr>
                   <th>
-                    <span class="inline">①＋ウエスト・二の腕痩身</span>
+                    <span class="inline">①＋ウエスト</span>
+                      <span class="inline">・二の腕痩身</span>
                   </th>
                   <td>
                     <span class="inline">￥7,560</span>
@@ -301,7 +285,8 @@
                 <tr>
                   <th>
                     <span class="inline">90分コース</span>
-                    <span class="inline">＋ウエスト・二の腕痩身</span>
+                    <span class="inline">＋ウエスト</span>
+                    <span class="inline">・二の腕痩身</span>
                   </th>
                   <td>
                     <span class="inline">￥10,800</span>
@@ -315,7 +300,8 @@
                 <tr>
                   <th>
                     <span class="inline">90分コース</span>
-                    <span class="inline">＋ウエスト・二の腕痩身</span>
+                    <span class="inline">＋ウエスト</span>
+                    <span class="inline">・二の腕痩身</span>
                     <span class="inline">＋ハンド</span>
                   </th>
                   <td>
@@ -370,19 +356,310 @@
                 </tr>
               </tbody>
             </table>
+            <p class="text">
+              <span class="inline">※ウェア、タオルなど</span>
+              <span class="inline">こちらですべて用意します。</span>
+            </p>
+            <p>
+              <span class="inline"></span>
+            </p>
+          </div>
+          <div class="menu-right">
+            <h3>フェイシャルトリートメント</h3>
             <table>
-              <h3>ネイル</h3>
               <tbody>
                 <tr>
-                  <th>
-                    ハンドネイル
+                  <th rowspan="2">
+                    <span class="inline">超音波コース</span>
+                    <span class="inline">約90分</span>
                   </th>
                   <td>
-
+                    <span class="inline">女性</span>
+                    <span class="inline">￥5,500</span>
+                  </td>
+                </tr>
+                <tr>  
+                  <td>
+                    <span class="inline">男性</span>
+                    <span class="inline">￥6,500</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">
+                    <span class="inline">ハンドマッサージコース</span>
+                    <span class="inline">約90分</span>
+                  </th>
+                  <td>
+                    <span class="inline">女性</span>
+                    <span class="inline">￥5,500</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="inline">男性</span>
+                    <span class="inline">￥6,500</span>
                   </td>
                 </tr>
               </tbody>
             </table>
+            <table>
+              <h3>ハンドネイル</h3>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">ネイルケア</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥2,160</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ネイルケア</span>
+                    <span class="inline">+マニキュア</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥3,240</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ハンドカラー</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥1,620</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ハンドマッサージ</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥1,620</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>フットネイル</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">フットケア</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥6,480</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">フットケア</span>
+                    <span class="inline">+ペディキュア</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥8,100</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ペディキュア</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥4,800</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">角質除去</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥4,320</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">フットカラー</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥1,620</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>カルジェルネイル</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">ハンドカルジェル</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥6,480</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">フットカルジェル</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥6,480</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ハンドリフィール</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥5,400</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">フットジェルリフィール</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥5,400</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>オプション</h5>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">フレンチ</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥200</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">グラデーション</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥100</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">マーブル</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥200</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">アート</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥100</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ストーン</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥100</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">スカルプチュア</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥800</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">サポート用チップ</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥500</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">シルクラップ</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥300</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text">
+              <span class="inline">※すべて1本の価格(税抜き)です。</span>
+            </p>
+            <h3>ジェルリムーブ</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">リムーブのみ</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥100</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">リムーブ後エナメル or ケア</span>
+                  </th>
+                  <td>
+                    <span class="inline">無料</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>他店のリムーブ</h5>
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <span class="inline">ソフトジェル</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥100</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">(リムーブのみ)</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥300</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">ハードジェル</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥200</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <span class="inline">(リムーブのみ)</span>
+                  </th>
+                  <td>
+                    <span class="inline">￥400</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text">
+              <span class="inline">※すべて1本の価格(税抜き)です。</span>
+            </p>
+            <p class="text">
+              <span class="inline">1週間以内にジェルが剥がれた場合は</span>
+              <span class="inline">無料でお直しします。</span>
+            </p>
           </div>
         </div>
       </section>

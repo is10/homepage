@@ -42,14 +42,14 @@ a {
 
 
 #header {
-  background: url(images/ita.jpg) repeat center top;
+  background: url(images/torimin.jpg) no-repeat center top;
   width: 100%;
   height: 640px;
 }
 #header img {
-  height: 40px;
-  width: 40px;
   padding: 5px;
+  background-color: rgba(255, 255, 255,0.9);
+  border-radius: 300px;
 }
 
 #top {
@@ -107,6 +107,11 @@ a {
   width: 100%;
 }
 
+#drop-box img{
+  height: 90%;
+  width: auto;
+}
+
 #drop li:hover {
   opacity: .5;
 }
@@ -156,7 +161,15 @@ h2 {
   font-size: 24px;
 }
 
-h3 {
+#greeting h3 {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+#beauty h3 {
   height: 30px;
   line-height: 30px;
   font-family: "Kokoro";
@@ -165,8 +178,8 @@ h3 {
   text-align: center;
   margin: 30px 0; 
   display: inline-block;
-  /*background-color: #A52A2A;*/
   color: #125115;
+  border-bottom: 2px solid ;
 }
 
 h4 {
@@ -176,15 +189,13 @@ h4 {
   padding-top:10px; 
 }
 
-h5 {
+#beauty h5 {
   height: 20px;
   line-height: 20px;
   font-family: "Kokoro";
   font-size: 16px;
  font-weight: bold; 
   display: inline-block;
-  /*background-color: #A52A2A;
-  color: white;*/
 }
 
 .section {
@@ -251,9 +262,6 @@ td {
 }
 
 #greeting {
-  color: #321b00;
-  background-color: #fcfded;
-  height: 650px;
 }
 
 #staff {
@@ -360,5 +368,9 @@ td {
     width: 100%;
     border-top: 1px solid #333;
     border-bottom: none;
+  }
+
+  #greeting h3 {
+    height: 60px;
   }
 }
