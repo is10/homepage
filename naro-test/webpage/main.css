@@ -14,6 +14,8 @@ body {
   font-weight: normal;
   /*"Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;*/
   -webkit-text-size-adjust : 100%!important ;
+  color: #321b00;
+  background-color: #fcfded;
 }
 
 img {
@@ -53,10 +55,10 @@ a {
 #top {
   width: 100%;
   margin: 0 auto;
-  background: #56ab2f; 
-  background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); 
-  background: linear-gradient(to left, #56ab2f , #a8e063); 
-  color:#fff;
+  background: url(images/wood_pattern.png) repeat center top; 
+  /*background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); 
+  background: linear-gradient(to left, #56ab2f , #a8e063); */
+  color: #56ab2f;
   position: fixed;
   top:0;
   z-index: 999;
@@ -93,20 +95,20 @@ a {
   content: "\f299";
 }
 
-#top li:hover {
-  opacity: .5;
-  -webkit-opacity: .5;
-  -moz-opacity: .5;
-}
 
 #toggle {
   display: none;
 }
 
-#drop-box {
-    background-color: white;
-    display: none;
-    width: 100%;
+#top #drop-box {
+  background-color: white;
+  display: none;
+  height: 0;
+  width: 100%;
+}
+
+#drop li:hover {
+  opacity: .5;
 }
 
 #logo {
@@ -140,7 +142,7 @@ h1 {
 
 #slider img {
   height: auto;
-  width: 100%;
+  max-width: 50%;
 }
 
 article {
@@ -157,15 +159,14 @@ h2 {
 h3 {
   height: 30px;
   line-height: 30px;
-  width: 90px;
   font-family: "Kokoro";
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   margin: 30px 0; 
   display: inline-block;
-  background-color: cornflowerblue;
-  color: white;
+  /*background-color: #A52A2A;*/
+  color: #125115;
 }
 
 h4 {
@@ -173,6 +174,17 @@ h4 {
   font: 20px/20px serif;
   text-align: center;
   padding-top:10px; 
+}
+
+h5 {
+  height: 20px;
+  line-height: 20px;
+  font-family: "Kokoro";
+  font-size: 16px;
+ font-weight: bold; 
+  display: inline-block;
+  /*background-color: #A52A2A;
+  color: white;*/
 }
 
 .section {
@@ -186,7 +198,7 @@ article p{
 
 .menu {
   margin-top: 10px;
-  margin-bottom: 20px;
+  padding-bottom: 30px; 
 }
 
 .inline {
@@ -239,7 +251,8 @@ td {
 }
 
 #greeting {
-  background-color: lawngreen;
+  color: #321b00;
+  background-color: #fcfded;
   height: 650px;
 }
 
@@ -250,30 +263,26 @@ td {
 
 #beauty {
   height: auto;
+  background: url(images/background/white.png) repeat center top;
 }
 
 #cafe {
-  background-color: lightblue;
   height: 650px;
 }
 
 #shop {
-  background-color: pink;
   height: 650px;
 }
 
 #counseling {
-  background-color: saddlebrown;
   height: 650px;
 }
 
 #access {
-  background-color: lightblue;
   height: 650px;
 }
 
 #link {
-  background-color: chocolate;
   height: 650px;
 }
 
@@ -299,6 +308,7 @@ td {
   .menu-left {
     float: none;
     width: 100%;
+    border-right: none;
   }
 
   .menu-right {
@@ -329,7 +339,11 @@ td {
     font-family: "Tsukushi B Round Gothic","筑紫B丸ゴシック"; 
     font-weight: bold;
   }
-
+  
+  #top #drop-box {
+    display: block;
+  }
+  
   .li-left {
     width: 100%;
     border-top: 1px solid #333;

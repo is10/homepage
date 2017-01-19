@@ -39,36 +39,48 @@ $(window).on('load', function(e) {
     }, speed, "easeInOutQuart");
     if (480 >= winWidth){
       $("#drop").slideToggle();
-      $("#drop-box").slideToggle();
     }
   });
 });
 //toggleクリックのアクション
 $(document).ready(function(){
+  hsize = $(window).height();
+  $("#drop-box").css("height", hsize - 450 + "px");
   $("#toggle").click(function(){
-    $("#drop").slideToggle();
-    $("#drop").toggleClass('active');
-    $("#drop-box").slideToggle();
-    $("#drop-box").toggleClass('active');
+    $.when(
+      $("#drop").slideToggle(),
+      $("#drop").toggleClass('active')
+    ).done(function(){ 
+      if (480 < window.innerWidth){
+        $("#drop").show();
+        $("#drop-box").hide();
+      }
+    });
     return false;
   });
   $(window).resize(function(){
     var win = window.innerWidth;
     var p = 480;
-    
+    hsize = $(window).height();
+    $("#drop-box").css("height", hsize - 450 + "px");
     if(win > p){
       $("#drop").show();
+      $("#drop-box").hide();
     }else {
       $("#drop").hide();
+      $("#drop-box").show();
     }
   });
 });
 //ナビゲーションのあまり埋める
-$(document).ready(function () {
-  hsize = $(window).height();
-  $("#drop-box").css("height", hsize - 450 + "px");
-});
-$(window).resize(function () {
-  hsize = $(window).height();
-  $("#drop-box").css("height", hsize - 450 + "px");
-});
+// $(document).ready(function () {
+//   hsize = $(window).height();
+//   $("#drop-box").css("height", hsize - 450 + "px");
+//   if (480 < window.innerWidth) {
+//     $("#drop-box").hide();
+//   }
+// });
+// $(window).resize(function () {
+//   hsize = $(window).height();
+//   $("#drop-box").css("height", hsize - 450 + "px");
+// });
