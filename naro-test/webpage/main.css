@@ -233,7 +233,7 @@ article p{
 }
 
 .single-table {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -341,6 +341,11 @@ td {
 
   .menu-right th {
     padding: 0;
+  }
+
+  .single-table {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 /*以下スマホ用*/
